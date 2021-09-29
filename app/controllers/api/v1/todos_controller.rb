@@ -12,7 +12,7 @@ class Api::V1::TodosController < ApplicationController
   def create
       todo = Todo.new(todo_params)
     if todo.save
-    r ender json: todo
+      render json: todo
     else
       render json: todo.errors, status: 422
       end
